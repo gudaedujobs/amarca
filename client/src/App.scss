@@ -1,0 +1,179 @@
+@import 'assets/styles/custom';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+.hide-scrollbar {
+    overflow: auto; 
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none; 
+}
+  
+
+a {
+    text-decoration: none!important;
+    color: inherit;
+}
+  
+.container {
+    max-width: 100%;
+}
+  
+.row {
+    padding: 0 7vw;
+}
+
+
+.subheading {
+    font-size: 1em;
+}
+
+.heading {
+    font-size: 2em;
+}
+
+.sidebar-item {
+    color: rgb(77, 77, 77)!important;
+    font-size: 14px;
+    padding-left: 9px;
+    padding-right: 9px;
+    position: relative;
+}
+
+.sidebar-item:hover {
+    background-color: $darker !important;
+    color: white !important;
+}
+
+.sidebar-item.selected::before {
+    content: '';
+    position: absolute;
+    right: -14px; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 11px solid transparent; 
+    border-bottom: 11px solid transparent;
+    border-left: 15px solid $light; 
+}
+
+.sidebar-item:hover::before {
+    border-left-color: $darker; 
+}
+
+table {
+    font-size: 14px;
+    margin: 0;
+}
+
+td, th, span {
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+}
+
+td, th {
+    border: 1px solid rgb(208, 217, 220);
+} 
+
+.table-light tbody tr td, .table-light thead tr th {
+    border: 1px solid rgb(175, 175, 175);
+} 
+
+.table-success tbody tr td, .table-success thead tr th {
+    background-color: $table;
+}
+
+.table-light tbody tr td, .table-light thead tr th {
+    background-color: white;
+}
+
+.pill-unselected {
+    background-color: $pale;
+    font-weight: bold!important;
+    font-weight: 100;
+    font-size: 12px;
+    display: inline-block;
+    white-space: normal; 
+    word-wrap: break-word; 
+    width: auto; 
+    text-align: left;
+    padding: 4px 8.5px;
+    margin-bottom: 2px;
+    margin-right: 3px;
+}
+
+.pill-unselected:hover {
+    background-color: $selected!important;
+    cursor: pointer;
+}
+
+.pill-unselectable {
+    background-color: $unselectable!important;
+    cursor: default!important;
+}
+
+.pill-unselectable:hover {
+    background-color: $unselectable!important;  
+    
+}
+
+.report-heading {
+    font-size: 20px;
+    color: $primary;
+    padding-top: 8px;
+}
+
+.vaccines-list, .sources-list {
+    font-size: 13px!important;
+}
+
+.manufacturer-table-source {
+    color: $warning;
+}
+
+.manufacturer-table-source:hover {
+    text-decoration: underline!important;
+}
+
+.hover-underline:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.read-more {
+    color: $warning;
+}
+
+.read-more:hover {
+    text-decoration: underline!important;
+}
+
+.last-updated {
+    font-size: 11px;
+}
+
+.alphabet-container {
+    width: 100%;
+    text-align: center; 
+}
+  
+.alphabet-item {
+    font-size: 12px;
+    background-color: $tertiary;
+    color: white;
+    border-radius: 0.25em;
+    text-align: center;
+    box-sizing: border-box;
+    width: 25px;
+    padding: 1.5px 0;
+}
+
+.alphabet-item:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
